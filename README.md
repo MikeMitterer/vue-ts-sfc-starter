@@ -6,16 +6,16 @@
 install:
 ```bash
     # NPM
-    npm install @mmit/vuetsfcstarter --save
+    npm install @mmit/vuetssfcstarter --save
 
     # YARN
-    yarn add @mmit/vuetsfcstarter
+    yarn add @mmit/vuetssfcstarter
 ```
 
 Import: (in your main.js)
 ```javascript   
 
-    import HelloWorldElements from '@mmit/vuetsfcstarter'
+    import HelloWorldElements from '@mmit/vuetssfcstarter'
     Vue.use(HelloWorldElements)
 
 ```
