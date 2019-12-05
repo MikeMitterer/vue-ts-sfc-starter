@@ -1,0 +1,93 @@
+{
+    "name": "@mmit/vuetsfcstarter",
+    "description": "VUE SFC Starter-Template",
+    "version": "0.1.0",
+    "author": "Mike Mitterer",
+    "license": "MIT",
+    "private": false,
+    "type-check": "tsc",
+    "main": "./lib/helloworld.umd.js",
+    "module": "./lib/helloworld.esm.js",
+    "unpkg": "./lib/helloworld.min.js",
+    "typings": "./lib/index.d.ts",
+    "scripts": {
+        "gen:barrels": "barrelsby --singleQuotes --delete -d src -l top -s flat",
+        "start": "vue-cli-service serve --mode development --open",
+        "lint": "vue-cli-service lint",
+        "test": "yarn run test:unit",
+        "test:unit": "vue-cli-service test:unit tests/unit/.*",
+        "test:integration": "vue-cli-service test:unit --runInBand --detectOpenHandles tests/integration/.*",
+        "build": "rm -rf lib && rollup -c",
+        "build:vue": "rm -rf lib && vue-cli-service build --target lib --dest lib --name HelloWorld ./src/index.ts",
+        "build:sample": "vue-cli-service build --mode development",
+        "build:sample:prod": "vue-cli-service build --mode production",
+        "deploy": "yarn version --new-version patch && yarn publish --non-interactive"
+    },
+    "engines": {
+        "yarn": ">= 1.16.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MikeMitterer/vue-ts-sfc-starter"
+    },
+    "dependencies": {
+        "postcss": "^7.0.23",
+        "vue": "^2.6.10",
+        "vue-class-component": "^7.1.0",
+        "vue-property-decorator": "^8.3.0",
+        "vuetify": "^2.1.12",
+        "vuetify-loader": "^1.4.2"
+    },
+    "devDependencies": {
+        "@mdi/font": "^4.6.95",
+        "@rollup/plugin-node-resolve": "^6.0.0",
+        "@types/node": "^12.12.14",
+        "@vue/cli-plugin-babel": "^4.1.1",
+        "@vue/cli-plugin-typescript": "^4.1.1",
+        "@vue/cli-plugin-unit-jest": "^4.1.1",
+        "@vue/cli-service": "^4.1.1",
+        "@vue/test-utils": "^1.0.0-beta.29",
+        "barrelsby": "^2.2.0",
+        "core-js": "^3.4.7",
+        "cross-env": "^6.0.3",
+        "rollup": "^1.27.8",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-css-porter": "^1.0.2",
+        "rollup-plugin-delete": "^1.1.0",
+        "rollup-plugin-sass": "^1.2.2",
+        "rollup-plugin-terser": "^5.1.2",
+        "rollup-plugin-typescript2": "^0.25.2",
+        "rollup-plugin-vue": "^5.1.4",
+        "sass": "^1.23.7",
+        "sass-loader": "^8.0.0",
+        "typescript": "^3.7.2",
+        "vue-cli-plugin-vuetify": "^2.0.2",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "files": [
+        "lib/*",
+        "src/*",
+        "public/*",
+        "*.json",
+        "*.js"
+    ],
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "> 2%",
+        "last 2 versions",
+        "safari >= 10",
+        "not ie > 0"
+    ],
+    "keywords": [
+        "vuejs",
+        "vue.js",
+        "progress",
+        "progressbar",
+        "progress-bar",
+        "typescript"
+    ]
+}
