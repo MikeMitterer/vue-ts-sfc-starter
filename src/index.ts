@@ -1,6 +1,6 @@
 // import Vuetify, { VBtn } from 'vuetify/lib';
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
 
 /**
  * Fügt eine "install" function bei MLiveForce hinzu

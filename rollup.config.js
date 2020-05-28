@@ -16,6 +16,13 @@ import resolve from '@rollup/plugin-node-resolve';
 import del from 'rollup-plugin-delete'
 import css from 'rollup-plugin-css-porter';
 import sass from 'rollup-plugin-sass';
+import alias from '@rollup/plugin-alias'
+import path from 'path'
+
+const projectRootDir = path.resolve(__dirname)
+const customResolver = resolve({
+  extensions: ['.ts', '.js', '.vue', '.sass', '.scss']
+})
 
 export default {
     input: 'src/index.ts', // our source file
@@ -91,6 +98,15 @@ export default {
         }),
         sass(),
         css(),
+        alias({
+            entries: [
+              {
+                find: '@',
+                replacement: path.resolve(projectRootDir, 'src'),
+              }
+            ],
+            customResolver,
+        }),
         resolve(),
         // terser() // minifies generated bundles
 
