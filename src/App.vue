@@ -9,7 +9,6 @@
                     <v-col class="component" cols="8">
                         Component, 8 cols
                         <hello-world></hello-world>
-                        <div class="map_canvas"></div>
                     </v-col>
                     <v-col class="ui" cols="4">
                         UI, 4 cols
@@ -31,10 +30,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+    import { Component, Vue } from 'vue-property-decorator';
+    import HelloWorld from './components/HelloWorld.vue';
 
-@Component({ components: { HelloWorld } })
+    @Component({ components: { HelloWorld } })
 export default class App extends Vue {
     private get title(): string {
         return process.env.VUE_APP_TITLE || '<process.env.VUE_APP_TITLE = undefined>';
