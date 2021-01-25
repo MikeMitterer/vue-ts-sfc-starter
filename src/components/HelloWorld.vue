@@ -29,7 +29,7 @@ export default class HelloWorld extends Vue {
 <style scoped lang="scss">
 $color: #ff0000;
 
-.prop {
+.prop-mike {
     color: $color;
 
     &.active {
