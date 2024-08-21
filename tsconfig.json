@@ -20,7 +20,7 @@
         "noImplicitReturns": true,
         "noEmitOnError": true,
         "strictNullChecks": true,
-        "preserveConstEnums": false,
+        "preserveConstEnums": true,
         "removeComments": false,
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
